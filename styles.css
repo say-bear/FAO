@@ -59,7 +59,7 @@ a:hover {
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;
     position: relative; /* Ensure this is positioned relative to its container */
-    height: 100v;
+    height: 100vh;
 }
 
 /*LEFT*/
@@ -163,7 +163,7 @@ a:hover {
 }
 
 .icon-circle:hover {
-    background-color: var(--dark_green)}
+    background-color: #96A23C}
 
 .icon-circle img {
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for both scale and opacity */

@@ -1,0 +1,242 @@
+:root {
+    --dark_green: #3D600A;
+    --light_green: #EEF0EA;
+    --white: #FFF;
+    --black: #000;
+    --text-size: 18px;
+    --text-line-height: 140%;
+    --h2-size: 60px;
+    --h3-size:48px;
+    --title-line-height:90%;
+    --heading-size: 16px;
+    --heading-line-height:120%;
+    --caption-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: "arimo";
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+header {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    z-index: 100;
+}
+
+h1 {
+    font-family: "cofo-peshka-variable",sans-serif;
+    font-variation-settings: 'wdth' 50, 'wght' 900, 'slnt' 0;
+    font-size: 160px;
+    padding: 32px 0px 0px 60px;
+    width: 200vw;
+    margin: 0px;
+    color: var(--dark_green);
+    background-color: var(--light_green);
+}
+
+p {
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
+}
+
+a {
+    color: #96A23C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark_green);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    position: relative; /* Ensure this is positioned relative to its container */
+    height: 100v;
+}
+
+/*LEFT*/
+
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / 6;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 1;
+    margin-top: 120px;
+    background-color: white;
+}
+
+
+.left-part.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.caption {
+    font-size: var(--caption-size);
+    line-height: var(--text-line-height);
+    margin: 12px 0px 32px 70px;
+    display: inline-block;
+}
+
+.start-button {
+    padding: 16px 60px;
+    border-radius: 100px;
+    border-width: 0px;
+    background: var(--light_green);
+    font-size: 28px;
+    font-weight: 700; 
+    letter-spacing: -1.4px;
+    color: var(--dark_green);
+    cursor: pointer;
+    margin: 0px 0px 0px 60px;
+    display: inline-block; /* Makes the button wrap around the text */
+    align-self: flex-start; /* Aligns the button to the left */
+    transition: 0.4s ease;
+}
+
+.start-button:hover {
+    background-color: var(--dark_green);
+    color: white;
+}
+
+.back-button {
+    position: absolute;
+    left: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+
+.logos {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 0px 0px 0px 60px;
+}
+
+/*MIDDLE*/
+
+.middle-part {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows of icon-text pairs */
+    justify-content: center;
+    z-index: 1;
+}
+
+.icon-circle-container {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Space between icon and text */
+    flex-direction: row-reverse;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-circle.no-hover {
+    pointer-events: none; /* Disable interaction */
+    transition: none; /* Disable hover transition */
+}
+
+.icon-circle:hover {
+    background-color: var(--dark_green)}
+
+.icon-circle img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for both scale and opacity */
+    opacity: 1; /* Default opacity */
+}
+
+.icon-circle img.fade-out {
+    opacity: 0; /* Fade out */
+}
+
+.icon-circle img.fade-in {
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 1s ease 0s; /* Delay the fade-in to ensure scale-up is complete */
+    opacity: 1; /* Fade in */
+}
+
+
+.icon-circle:hover img {
+    filter: brightness(100); /* Change icon color to white */}
+
+.icon-text {
+    font-size: var(--heading-size);
+    font-weight: 700;
+    font-style: normal;
+    line-height: var(--heading-line-height);
+    position: absolute;
+    text-align: right;
+    width: 400px;
+    margin-right: 86px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon-circle-container.show-text .icon-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/*RIGHT*/
+
+
+.right-part {
+    grid-column: span 6;
+    z-index: 999;
+}
+
+.image {
+    height: 100%;
+}
+
+/*Page Transition*/
+
+#transition-circle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: var(--light_green);
+    border-radius: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: 0.8s ease-out;
+}
+
+#transition-circle.expand {
+    width: 150vw;
+    height: 150vw;
+}
+
+#transition-circle.shrink {
+    width: 0;
+    height: 0;
+}

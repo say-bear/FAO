@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         leftPart.classList.add('hidden');
         iconContainers.forEach(container => container.classList.add('show-text'));
+        iconCircles.forEach(circle => {
+            circle.classList.add('show-border')
+    });
 
         iconImages.forEach((img, index) => {
             img.classList.add('fade-out');
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = `images/icons/icon${index + 1}.svg`;
                 img.classList.remove('fade-out');
                 img.classList.add('fade-in');
-            }, 300); // Delay to match the scale-up transition
+            }, 300);
         });
     });
 
@@ -35,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         leftPart.classList.remove('hidden');
         iconContainers.forEach(container => container.classList.remove('show-text'));
-
+        iconCircles.forEach(circle => circle.classList.remove('show-border'));
         iconImages.forEach(img => {
             img.classList.add('fade-in');
             setTimeout(() => {
@@ -69,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     transitionCircle.classList.add('shrink');
                 }
             });
+            
         });
     });
 });

@@ -1,6 +1,6 @@
 :root {
     --dark_green: #3D600A;
-    --light_green: #EEF0EA;
+    --light_green: #E6EBDB;
     --white: #FFF;
     --black: #000;
     --text-size: 18px;
@@ -36,7 +36,7 @@ h1 {
     width: 200vw;
     margin: 0px;
     color: var(--dark_green);
-    background-color: var(--light_green);
+    background-color: var(--light_green);;
 }
 
 p {
@@ -264,7 +264,7 @@ a:hover {
     left: 60px; /* 60px from the left */
     display: flex;
     flex-direction: column;
-    gap: 28px; /* Space between icon containers */
+    gap: 4px; /* Space between icon containers */
     z-index: 10;
     justify-content: center;
     height: 100vh;
@@ -316,17 +316,25 @@ a:hover {
     padding-left: 120px;
 }
 
-.middle-content {
-    width: 1000px; /* Fixed width */
+.middle-tree {
+    width: 50vw; /* Fixed width */
     background-image: url("/old/deforest-dots/your-image.png");
     transition: opacity 0.3s ease;
 }
 
 .right-content {
     flex: 1;
-    background-color: #c21717;
+    background-color: var(--light_green);
     transition: transform 0.5s ease-in-out;
+    margin: 40px 40px 40px 0px;
+    padding: 24px 32px 24px 32px;
+    border-radius: 24px;
+    background-image: url(/images/cardbg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+    
 
 .right-content.slide-out {
     transform: translateX(100%);
@@ -337,3 +345,33 @@ a:hover {
     opacity: 1;
 }
 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h2 {
+    font-family: "bebas-neue-pro",sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 54px */
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.card-counter {
+    color: var(--white, #FFF);
+    font-family: "cofo-peshka-variable",sans-serif;
+    font-variation-settings: 'wdth' 50, 'wght' 900, 'slnt' 0;
+    font-size: 260px;
+    font-style: normal;
+    line-height: 80%; /* 208px */
+    transform: translateY(12px);
+}

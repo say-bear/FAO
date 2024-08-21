@@ -7,47 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100); // Adjust the delay as needed
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const sideMenuLinks = document.querySelectorAll('.side-menu .icon-circle-container');
-    const middleContent = document.querySelector('.middle-tree');
-    const rightContent = document.querySelector('.right-content');
-    const backButton = document.querySelector('.back-button');
-
-    sideMenuLinks.forEach((link, index) => {
-        link.addEventListener('click', () => {
-            const customLink = link.querySelector('.icon-circle').getAttribute('data-link'); // Custom link from the data-link attribute
-
-            // Remove any existing slide-in class to ensure the animation works every time
-            rightContent.classList.remove('slide-in');
-
-            // Add the slide-out animation
-            rightContent.classList.add('slide-out');
-
-            // After the slide-out transition, load the new content
-            setTimeout(() => {
-                fetch(customLink)
-                    .then(response => response.text())
-                    .then(data => {
-                        const parser = new DOMParser();
-                        const newDocument = parser.parseFromString(data, 'text/html');
-
-                        // Replace the middle and right content
-                        middleContent.innerHTML = newDocument.querySelector('.middle-tree').innerHTML;
-                        rightContent.innerHTML = newDocument.querySelector('.right-content').innerHTML;
-
-                        // Re-apply the slide-in animation
-                        setTimeout(() => {
-                            rightContent.classList.remove('slide-out');
-                            rightContent.classList.add('slide-in');
-                        }, 10); // Slight delay to ensure the class change is processed
-
-                        // Update the URL without reloading the page
-                        history.pushState(null, null, customLink);
-                    });
-            }, 300); // Match this duration with the CSS transition time
-        });
-    });
-});
 
 // Ensure that if the circle animation runs initially, it shrinks immediately
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100); // Adjust the delay as needed
     }
 });
+
+// Back + side menu
 
 document.addEventListener('DOMContentLoaded', () => {
     const sideMenuLinks = document.querySelectorAll('.side-menu .icon-circle-container');
@@ -123,7 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
 // Listen for the popstate event to handle browser navigation
+
 window.addEventListener('popstate', () => {
     const currentUrl = window.location.href;
     

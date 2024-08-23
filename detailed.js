@@ -1,3 +1,5 @@
+// Circle animation
+
 document.addEventListener('DOMContentLoaded', () => {
     const transitionCircle = document.getElementById('transition-circle');
 
@@ -8,105 +10,139 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Ensure that if the circle animation runs initially, it shrinks immediately
-document.addEventListener('DOMContentLoaded', () => {
-    const transitionCircle = document.getElementById('transition-circle');
+// 3 buttons
 
-    if (transitionCircle) {
-        setTimeout(() => {
-            transitionCircle.classList.add('shrink');
-        }, 100); // Adjust the delay as needed
-    }
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeAnimations();
+    setupSideMenuNavigation();
+    setupPopstateListener();
 });
 
-// Back + side menu
+function initializeAnimations() {
+    const treeImage = document.getElementById('tree-image');
+    const buttonUp = document.getElementById('button-up');
+    const buttonDown = document.getElementById('button-down');
+    const backButton = document.getElementById('back-to-tree');
 
-document.addEventListener('DOMContentLoaded', () => {
+    if (buttonUp) {
+        buttonUp.addEventListener('click', () => {
+            animateTreeImage(treeImage, 'images/branch.png', 100, -100, buttonUp, buttonDown, backButton);
+        });
+    }
+
+    if (buttonDown) {
+        buttonDown.addEventListener('click', () => {
+            animateTreeImage(treeImage, 'images/root.png', -100, 100, buttonUp, buttonDown, backButton);
+        });
+    }
+
+    if (backButton) {
+        backButton.addEventListener('click', () => {
+            animateTreeImage(treeImage, 'images/bgtree.png', 0, 0, buttonUp, buttonDown, backButton, true);
+        });
+    }
+}
+
+// Helper function to animate tree image transitions
+function animateTreeImage(treeImage, newSrc, startY, endY, buttonUp, buttonDown, backButton, reset = false) {
+    treeImage.style.transform = `translateY(${startY}px)`;
+    treeImage.style.opacity = '0';
+
+    setTimeout(() => {
+        treeImage.src = newSrc;
+        treeImage.style.transform = `translateY(${endY}px)`;
+        treeImage.style.opacity = '1';
+
+        if (reset) {
+            buttonUp.style.visibility = 'visible';
+            buttonDown.style.visibility = 'visible';
+            backButton.style.display = 'none';
+        } else {
+            buttonUp.style.visibility = 'hidden';
+            buttonDown.style.visibility = 'hidden';
+            backButton.style.display = 'flex';
+        }
+    }, 800);
+}
+
+
+
+// Setup side menu navigation with content updates
+function setupSideMenuNavigation() {
     const sideMenuLinks = document.querySelectorAll('.side-menu .icon-circle-container');
     const middleContent = document.querySelector('.middle-tree');
     const rightContent = document.querySelector('.right-content');
-    const backButton = document.querySelector('.back-button');
-    const transitionCircle = document.getElementById('transition-circle');
+    const buttonContainer = document.querySelector('.buttons-container');
 
-    sideMenuLinks.forEach((link, index) => {
+    sideMenuLinks.forEach((link) => {
         link.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent default link behavior
+            const customLink = link.querySelector('.icon-circle').getAttribute('data-link');
 
-            if (link.contains(backButton)) {
-                // If the back button is clicked, trigger the transition circle
-                transitionCircle.classList.remove('shrink');
-                transitionCircle.classList.add('expand');
+            setTimeout(() => {
+                fetch(customLink)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const newDocument = parser.parseFromString(data, 'text/html');
 
-                setTimeout(() => {
-                    // Navigate to the main page with a query parameter to trigger the shrinking animation
-                    window.location.href = 'index.html?transition=shrink';
-                }, 800); // Adjust the timing to match your animation
-            } else {
-                const customLink = link.querySelector('.icon-circle').getAttribute('data-link');
+                        middleContent.innerHTML = newDocument.querySelector('.middle-tree').innerHTML;
+                        rightContent.innerHTML = newDocument.querySelector('.right-content').innerHTML;
 
-                // Remove any existing slide-in class to ensure the animation works every time
-                rightContent.classList.remove('slide-in');
-
-                // Add the slide-out animation
-                rightContent.classList.add('slide-out');
-
-                // After the slide-out transition, load the new content
-                setTimeout(() => {
-                    fetch(customLink)
-                        .then(response => response.text())
-                        .then(data => {
-                            const parser = new DOMParser();
-                            const newDocument = parser.parseFromString(data, 'text/html');
-
-                            // Replace the middle and right content
-                            middleContent.innerHTML = newDocument.querySelector('.middle-tree').innerHTML;
-                            rightContent.innerHTML = newDocument.querySelector('.right-content').innerHTML;
-
-                            // Re-apply the slide-in animation
-                            setTimeout(() => {
-                                rightContent.classList.remove('slide-out');
-                                rightContent.classList.add('slide-in');
-                            }, 10); // Slight delay to ensure the class change is processed
-
-                            // Update the URL without reloading the page
-                            history.pushState(null, null, customLink);
-                        });
-                }, 300); // Match this duration with the CSS transition time
-            }
+                        buttonContainer.style.display = 'flex';
+                        resetButtonsAndImage();
+                        initializeAnimations();  // Reinitialize animations after content update
+                    });
+            }, 500);
         });
     });
-
-    // Ensure that if the circle animation runs initially, it shrinks immediately
-    if (transitionCircle) {
-        setTimeout(() => {
-            transitionCircle.classList.add('shrink');
-        }, 100); // Adjust the delay as needed
-    }
-});
+}
 
 
+// Reset buttons and tree image to the initial state
+function resetButtonsAndImage() {
+    const buttonUp = document.getElementById('button-up');
+    const buttonDown = document.getElementById('button-down');
+    const backButton = document.getElementById('back-to-tree');
+    const treeImage = document.getElementById('tree-image');
 
-// Listen for the popstate event to handle browser navigation
+    buttonUp.style.visibility = 'visible';
+    buttonDown.style.visibility = 'visible';
+    backButton.style.display = 'none';
 
-window.addEventListener('popstate', () => {
-    const currentUrl = window.location.href;
-    
-    fetch(currentUrl)
-        .then(response => response.text())
-        .then(data => {
-            const parser = new DOMParser();
-            const newDocument = parser.parseFromString(data, 'text/html');
-            
-            const middleContent = document.querySelector('.middle-tree');
-            const rightContent = document.querySelector('.right-content');
-            
-            // Replace the middle and right content
-            middleContent.innerHTML = newDocument.querySelector('.middle-tree').innerHTML;
-            rightContent.innerHTML = newDocument.querySelector('.right-content').innerHTML;
+    treeImage.style.opacity = '0';
+    setTimeout(() => {
+        treeImage.src = 'images/bgtree.png';
+        treeImage.style.transform = '';
+        treeImage.style.opacity = '1';
+    }, 800);
+}
 
-            // Re-apply the slide-in animation
-            setTimeout(() => {
-                rightContent.classList.add('slide-in');
-            }, 10); // Slight delay to ensure the class change is processed
-        });
-});
+
+// Setup popstate listener to handle browser navigation
+function setupPopstateListener() {
+    window.addEventListener('popstate', () => {
+        const currentUrl = window.location.href;
+
+        fetch(currentUrl)
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const newDocument = parser.parseFromString(data, 'text/html');
+
+                const middleContent = document.querySelector('.middle-tree');
+                const rightContent = document.querySelector('.right-content');
+
+                setTimeout(() => {
+                    middleContent.innerHTML = newDocument.querySelector('.middle-tree').innerHTML;
+                    rightContent.innerHTML = newDocument.querySelector('.right-content').innerHTML;
+
+                    resetButtonsAndImage();
+                    initializeAnimations();  // Reinitialize animations after content update
+                }, 500);
+            });
+    });
+}
+
+

@@ -39,6 +39,22 @@ h1 {
     background-color: var(--light_green);;
 }
 
+.h2 {
+    font-family: "bebas-neue-pro",sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 54px */
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
 p {
     font-size: var(--text-size);
     line-height: var(--text-line-height);
@@ -318,12 +334,12 @@ a:hover {
 
 .middle-tree {
     width: 50vw; /* Fixed width */
-    background-image: url("/old/deforest-dots/your-image.png");
     transition: opacity 0.3s ease;
 }
 
 .right-content {
     flex: 1;
+    z-index: 2;
     background-color: var(--light_green);
     transition: transform 0.5s ease-in-out;
     margin: 40px 40px 40px 0px;
@@ -336,35 +352,11 @@ a:hover {
 }
     
 
-.right-content.slide-out {
-    transform: translateX(100%);
-}
-
-.right-content.slide-in {
-    transform: translateX(0);
-    opacity: 1;
-}
-
 .card-header {
     display: flex;
     justify-content: space-between;
 }
 
-.h2 {
-    font-family: "bebas-neue-pro",sans-serif;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%; /* 54px */
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    width: 100%;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 30px;
-}
 
 .card-counter {
     color: var(--white, #FFF);
@@ -375,3 +367,102 @@ a:hover {
     line-height: 80%; /* 208px */
     transform: translateY(12px);
 }
+
+
+.content-hidden {
+    visibility: hidden;
+}
+
+.content-visible {
+    visibility: visible;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.card-header, .card-content {
+    transition: opacity 0.5s ease;
+
+}
+ .card-content {
+    transition-delay: 0.1s;
+ }
+
+
+
+/* Text Line-by-line
+
+
+.reveal-text {
+    visibility: hidden;
+  }
+  
+  .line {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+
+*/
+
+
+  /*tree to branch*/
+
+
+.buttons-container {
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 40px;
+    width: 220px;
+}
+
+#tree-image {
+    transition: 0.8s ease;
+}
+
+.btn-detailed {
+    display: flex;
+    padding: 2px 16px 2px 2px;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 56px;
+    background: var(--light_green);
+    color: var(--black);
+    font-size: var(--text-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--text-line-height);
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.btn-detailed:hover {
+    background-color: #FFF;
+}
+
+.card-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-left: -228px;
+}
+
+.btn-arrow {
+    background-color: #FFF;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+

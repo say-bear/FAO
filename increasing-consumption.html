@@ -3,67 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12-Column Layout Page</title>
+    <title>Solution Tree</title>
     <link rel="stylesheet" href="https://use.typekit.net/raa8xjd.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/faologo.svg" alt="Company Logo">
+        <a href="index.html"><img src="images/faologo.svg" alt="Logo of The Food and Agriculture Organization of the United Nations" id="logo-image"></a>
         <div id="transition-circle" class="expand"></div>
     </header>
 
+    <div class="content-wrapper" id="page-content">
 
         <div class="side-menu">
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
-                    <img src="images/icons/icon1.svg" alt="Icon 1">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
+                        <img src="images/icons/icon1.svg" alt="Icon 1">
+                    </div>
+                    <div class="icon-text">Strengthening land<br>use governance</div>
                 </div>
-                <div class="icon-text">Strengthening land<br>use governance</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
-                    <img src="images/icons/icon2.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
+                        <img src="images/icons/icon2.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
                 </div>
-                <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="increasing-consumption.html">
-                    <img src="images/icons/icon3.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="increasing-consumption.html">
+                        <img src="images/icons/icon3.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
                 </div>
-                <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="creating-incentives.html">
-                    <img src="images/icons/icon4.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="creating-incentives.html">
+                        <img src="images/icons/icon4.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Creating incentives<br>to keep forests intact</div>
                 </div>
-                <div class="icon-text">Creating incentives<br>to keep forests intact</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
-                    <img src="images/icons/icon5.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
+                        <img src="images/icons/icon5.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
                 </div>
-                <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="improving-livelihoods.html">
-                    <img src="images/icons/icon6.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="improving-livelihoods.html">
+                        <img src="images/icons/icon6.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
                 </div>
-                <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
-            </div>
-            <div class="icon-circle-container">
-                    <button class="back-button"><img src="images/icons/arrow_back.svg"></button>
-                <div class="icon-text">Back to main</div>
-            </div>
-        </div>
-
-    <div class="content-wrapper">
+        </div>   
 
         <div class="middle-tree">
-           Middle content 3
+                <img src="images/bgtree.png" class="tree-image" id="tree-image">
+                <div class="dots-container" id="dots-container"></div>
         </div>
-        <div class="right-content">
-            Increasing consumption and trade<br>of responsibly-produced agricultural commodities
+
+        <div class="card-btn">
+    
+                <div class="buttons-container">
+    
+                    <button id="button-up" class="btn-detailed">
+                            <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(90deg);">
+                        Related solutions
+                    </button>
+    
+                    <button id="button-down" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(-90deg);">
+                        Related drivers
+                    </button>
+    
+                    <button id="back-to-tree" style="display:none;" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow">
+                        Back to Tree
+                    </button>
+    
+                </div>
+                <div class="right-content">
+                    <div class="card-header">
+                        <div class="h2">
+                            Increasing consumption and trade<br>of responsibly-produced<br>agricultural commodities
+                            <hr size="2" color="#000" style="margin: 0px;">
+                        </div>
+                        <div class="card-counter">
+                            03
+                        </div>
+                    </div>
+                        <div class="card-content" id="default-content">
+                            <p>
+                                Increasing the consumption and trade of responsibly-produced agricultural commodities can create a win-win for both the environment and sustainable economic development. Recent decades have seen a rapid increase in the demand for agricultural commodities, including those most commonly produced on recently deforested land. Driven by rapid population growth, urbanization, the ascent of a globalized economy, and a growing global middle class, dietary patterns have shifted towards higher overall food consumption and protein intake. To meet the increasing demand, agricultural production has expanded rapidly and particularly in the tropics, notably through the conversion of forests. Meanwhile, only limited market niches have integrated requirements for sustainable and responsible production. Consumer awareness and market demand for sustainable products is relatively low compared to the overall size of the market for agricultural commodities. 
+                                <br>
+                                <br>
+                                In this context, mainstreaming more sustainable production and consumption patterns can make a real difference in achieving forest protection while contributing towards broader benefits for health, the environment, and sustainable development. Companies can take action in adopting responsible business practices and investing in traceability and transparency. Likewise, governments can align trade and other policies with sustainability objectives. In addition, consumers can be incentivized to adapt their consumption patterns towards more sustainable choices, for instance through awareness-raising instruments or financial incentives.
+                            </p>
+                        </div>
+                        <div class="card-content" id="dot11-content" style="display:none;">
+                            <div class="h3">
+                                Promoting responsible business conduct, traceability and transparency 
+                            </div>
+                            <p>
+                                Upstream, midstream, and downstream businesses are increasingly taking action to eliminate the risk of deforestation from their operations. This follows the recognition that the private sector has an important role to play in reducing its contribution to deforestation. Consumer goods companies, traders, producers, and financial institutions can act together and individually by investing in responsible business practices, traceability, and transparency. These include defining and implementing zero deforestation sourcing policies, identifying and mitigating the risks of deforestation, and engaging in multi-stakeholder initiatives to decouple their supply chains from deforestation. In addition, they can work with their suppliers, reward responsible production practices, and strengthen transparency by publicly disclosing the results and progress of the implementation of forest commitments. Assurance and licensing systems, sectoral standards and certification schemes can also enhance corporate traceability.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Development of due diligence procedures in business lines using commodities with a risk to be linked to deforestation</li>
+                                <li>Strengthening of traceability mechanisms, including through direct and indirect supplier engagement, the development of assurance and public licensing systems, sectoral standards, and certification schemes</li>
+                                <li>Multi-stakeholder platforms, collaboration platforms, precompetitive collaboration and initiatives to decouple supply chains from deforestation, including to facilitate engagement in jurisdictional programs or to develop collective moratoria on most risky areas of production  </li>
+                                <li>Encouragement of financial institutions to integrate environmental, social, and governance (ESG) criteria and eliminate deforestation from their investment portfolios, and facilitation of private investment in responsible business practices and traceability systems</li>
+                                <li>Development of transparency mechanisms, including through agreements on standards for data disclosure and publication, and related harmonization of terminology and metrics </li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot12-content" style="display:none;">
+                            <div class="h3">
+                                Aligning trade policies with sustainability objectives
+                            </div>
+                            <p>
+                                Aligning trade policies with sustainability objectives can constitute a win-win for the environment and sustainable economic development. To leverage trade’s potential as a force for good, governments can for instance integrate environment-related provisions for the agriculture, fisheries and forestry sectors (Ag-ERPs) in regional trade agreements. Mandatory market-based measures to address deforestation have also been recently adopted and proposed by a number of countries globally. Measures to support the development of these binding requirements can enhance policy effectiveness and advance bilateral or multilateral dialogue to inform policy design and implementation. However, it is important to consider the potential trade-offs associated with the implementation of such policies and regulations. For instance, they can result in additional costs for farmers and businesses, not only in terms of the investment required to comply with them, but also through the various reporting requirements that they often entail, creating recurring costs for businesses. Therefore, it is crucial that such policies are designed taking into account the situations and constraints of smallholder farmers and small and medium-sized enterprises (SMEs), and that they are accompanied by appropriate support measures. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Introduction of environment-related provisions (Ag-ERPs) in regional trade agreements and related policy-level discussions through multilateral processes to avoid the creation of asymmetric approaches to environmental commitments by regional trade agreements</li>
+                                <li>Enhanced cooperation at the international level to promote and support capacity development on environmental issues related to trade</li>
+                                <li>Legislative frameworks laying out mandatory minimum standards for production and trade </li>
+                                <li>Bilateral or multilateral dialogue to inform the design of regulatory frameworks on the production and trade of forest-risk commodities</li>
+                                <li>Financial and technical support to support small-scale farmers' compliance with legislation and related reporting requirements</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot13-content" style="display:none;">
+                            <div class="h3">
+                                Fostering consumer demand for responsibly-produced products
+                            </div>
+                            <p>
+                                Demand for products made of agricultural commodities commonly linked to deforestation, such as beef, soy, palm oil, coffee, or cocoa, has been rapidly increasing over recent years. Consumer choices can make a real difference in pivoting this demand to be met by responsible production. Promoting changes in human diets and consumption patterns towards more sustainable choices, for instance, through awareness-raising instruments, financial incentives, and responsible public procurement policies can create win-wins for forest protection, sustainable economic growth, and more diverse and healthy diets.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Awareness-raising and advocacy campaigns on the environmental and health benefits of a transition to sustainable diets</li>
+                                <li>Changes in food taxes and subsidies to provide consumers with incentives to consume healthy diets</li>
+                                <li>Improved access to local markets to increase options and opportunities for consumers to consume diverse and healthy diets all year long</li>
+                                <li>Responsible public procurement policies associated with food distribution </li>
+                                <li>Clear and transparent public and private labelling systems and development of public branding strategies to appeal to international markets</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot14-content" style="display:none;">
+                            <div class="h3">
+                                Promoting sustainable livestock diets
+                            </div>
+                            <p>
+                                This approach focuses on optimizing feed composition and feeding practices to enhance nutrient use efficiency, minimize waste, and reduce the environmental footprint of the livestock sector. To meet the increased demand for livestock feed associated with the rise in meat and dairy product consumption, governments and the private sector can promote the sourcing of responsibly-produced feed crops and shift to alternative feed sources that do not contribute to deforestation. This approach would help satisfy the livestock sector's needs while promoting environmental conservation goals.sSustainable livestock diets may incorporate locally-sourced feed ingredients, alternative protein sources such as insects or algae, and precision feeding techniques that match nutrient supply to animal requirements. Additionally, improving pasture management, hydroponic fodder production and promoting the use of crop residues and by-products can decrease deforestation and competition with human food production.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Development of incentives for the production of responsibly produced feed sources </li>
+                                <li>Shifts from deforestation-risk commodities to alternative feed sources</li>
+                                <li>Optimizing feed efficiency through precision feeding and feed additives use </li>
+                                <li>Diet formulation for reduced environmental impact</li>
+                                <li>Feeding for safe livestock product </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content" id="dot15-content" style="display:none;">
+                            <div class="h3">
+                                Fostering sustainability of biofuel consumption, production, and trade
+                            </div>
+                            <p>
+                                The development of bioenergy presents a broad range of opportunities, including for energy security, climate action, and rural development. However, it also involves possible trade-offs for food security and the sustainable use of natural resources. In this context, governments can play a key role in coordinating and balancing food, energy, and environmental priorities to give to the sustainable management of natural resources. This includes promoting and facilitating exchanges of information and cooperation on biofuels, environment, and food security linkages and designing policies and investments for the production of biofuels in accordance with national sustainable development strategies and multilateral agreements applicable to food security and the environment.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Exchange of information and cooperation on biofuels, environment, and food security links</li>
+                                <li>Development of policies and investments for the production of biofuels in accordance with national sustainable development strategies and multilateral agreements applicable to food security and the environment</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot21-content" style="display:none;">
+                            <div class="h3">
+                                Population growth
+                            </div>
+                            <p>
+                                Global and local population growth is an important underlying driver of agriculture-linked deforestation. The world’s population grew from 2.5 billion people in 1950 to 8 billion in 2022 and is expected to increase to nearly 10 billion people by 2050. Driven by this rapid demographic growth, demand for food rises and is partially met by rapidly increasing agricultural production. Where agricultural intensification is not feasible or necessary capacity and investments are lacking, farmers often turn to agricultural expansion to meet this surge in demand. In many cases, this means converting forests into agricultural land, particularly in areas where fertile farmland is scarce.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot22-content" style="display:none;">
+                            <div class="h3">
+                                Globalization and market integration
+                            </div>
+                            <p>
+                                The world is more globalized than ever. Connectivity between different parts of the world has rapidly increased in recent decades, accompanied by cross-border trade and investment. In the agricultural sector, this has led to profound patterns, notably that agricultural growth is now mainly driven by export markets and that global agricultural production is gradually shifting towards tropical regions. With their high percentage of forest cover, many tropical countries are, however, most at risk of deforestation. In the case of commodities frequently associated with deforestation, such as beef, palm oil, soy, cocoa, or coffee, these globalized demand- and supply-side factors are key driving forces contributing to deforestation.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot23-content" style="display:none;">
+                            <div class="h3">
+                                Dietary shifts  
+                            </div>
+                            <p>
+                                As affluence increases, diets tends to shift toward higher protein consumption which usually requires additional land to produce the same amount of food. While developed countries show a reverse trend, a growing middle class in emerging economies and changing consumption patterns due to urbanization are the primary drivers behind the global growth in protein demand. In this context, livestock and feed production expand to meet rising demand, requiring more land due their high land intensity. In forested countries, this often leads to the conversion of forests into farmland for livestock grazing or animal feed production.
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot24-content" style="display:none;">
+                            <div class="h3">
+                                Demand-side policies  
+                            </div>
+                            <p>
+                                Demand-side policies in consumer countries can influence deforestation patterns. For instance,  alternative energy policies promoting  biomass and biofuel consumption are documented to contribute to  deforestation. As bioenergy is being promoted in consumer markets, bioenergy production increases, often in low- and middle-income forested countries where additional farmland for bioenergy production competes with forests. Likewise, consumer policies favoring  certain products and commodities can impact deforestation. In the case of forest-risk commodities, and combined with a lack of regulation addressing imported deforestation, these policies can contribute to deforestation.
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot25-content" style="display:none;">
+                            <div class="h3">
+                                Unsustainable corporate practices  
+                            </div>
+                            <p>
+                                Companies sourcing and trading commodities frequently associated with the expansion of the agricultural frontier can play an important role in either driving or reducing deforestation. While some companies have adopted zero-deforestation commitments, and some are making progress against them, many are not. Through their sourcing policies, or lack thereof, companies may indirectly drive deforestation, particularly when due diligence processes are not in place.
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot26-content" style="display:none;">
+                            <div class="h3">
+                                International trade and investment policies  
+                            </div>
+                            <p>
+                                The relationship between trade and the environment is intricate. Trade can improve the allocation of production among countries, with an efficiency-enhancing role in natural resources use. Likewise, open markets can improve access to new technologies that make domestic production processes more cost-efficient and reduce the use of inputs as well as other environmentally harmful substances. However, economic growth due to trade expansion can also have a direct impact on the environment, for instance by contributing to natural resource degradation. Notably, research suggests that deforestation may increase after an increase in agricultural production following the enactment of regional trade agreements, particularly when these agreements are not accompanied by policies to guide agricultural land expansion away from forests. There is often a positive correlation between trade liberalization and growth in agricultural production, particularly in developing countries located in the tropics. Due to this liberalization, farmers may increase their production for export markets and meet the increased demand by converting forests into agricultural lands. 
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot27-content" style="display:none;">
+                            <div class="h3">
+                                Lacking consumer awareness, willingness, and ability to pay sustainability premiums  
+                            </div>
+                            <p>
+                                Consumers have an important role to play in reducing deforestation. However, consumer choices frequently contribute to deforestation. An overall lack of consumer awareness of the link between deforestation and the products they consume, an unwillingness or inability to pay for the costs of responsibly sourced products, in addition to lacking or confusing labels and markings, drives the demand for products with deforestation exposure. Another aspect that may contribute to consumer choices is a public disconnect with forests and nature, and little awareness of and interest in their protection. 
+                            </p>
+                        </div>
+
+                    </div>
         </div>
     </div>
     <script src="detailed.js"></script>

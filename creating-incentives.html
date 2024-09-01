@@ -3,67 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12-Column Layout Page</title>
+    <title>Solution Tree</title>
     <link rel="stylesheet" href="https://use.typekit.net/raa8xjd.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/faologo.svg" alt="Company Logo">
+        <a href="index.html"><img src="images/faologo.svg" alt="Logo of The Food and Agriculture Organization of the United Nations" id="logo-image"></a>
         <div id="transition-circle" class="expand"></div>
     </header>
 
 
-        <div class="side-menu">
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
-                    <img src="images/icons/icon1.svg" alt="Icon 1">
-                </div>
-                <div class="icon-text">Strengthening land<br>use governance</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
-                    <img src="images/icons/icon2.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="increasing-consumption.html">
-                    <img src="images/icons/icon3.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="creating-incentives.html">
-                    <img src="images/icons/icon4.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Creating incentives<br>to keep forests intact</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
-                    <img src="images/icons/icon5.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="improving-livelihoods.html">
-                    <img src="images/icons/icon6.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
-            </div>
-            <div class="icon-circle-container">
-                    <button class="back-button"><img src="images/icons/arrow_back.svg"></button>
-                <div class="icon-text">Back to main</div>
-            </div>
-        </div>
+    <div class="content-wrapper" id="page-content">
 
-    <div class="content-wrapper">
+        <div class="side-menu">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
+                        <img src="images/icons/icon1.svg" alt="Icon 1">
+                    </div>
+                    <div class="icon-text">Strengthening land<br>use governance</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
+                        <img src="images/icons/icon2.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="increasing-consumption.html">
+                        <img src="images/icons/icon3.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="creating-incentives.html">
+                        <img src="images/icons/icon4.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Creating incentives<br>to keep forests intact</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
+                        <img src="images/icons/icon5.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="improving-livelihoods.html">
+                        <img src="images/icons/icon6.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
+                </div>
+        </div>
 
         <div class="middle-tree">
-           Middle content 4
+                <img src="images/bgtree.png" class="tree-image" id="tree-image">
+                <div class="dots-container" id="dots-container"></div>
         </div>
-        <div class="right-content">
-            Creating incentives<br>to keep forests intact
+
+        <div class="card-btn">
+    
+                <div class="buttons-container">
+    
+                    <button id="button-up" class="btn-detailed">
+                            <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(90deg);">
+                        Related solutions
+                    </button>
+    
+                    <button id="button-down" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(-90deg);">
+                        Related drivers
+                    </button>
+    
+                    <button id="back-to-tree" style="display:none;" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow">
+                        Back to Tree
+                    </button>
+    
+                </div>
+                <div class="right-content">
+                    <div class="card-header">
+                        <div class="h2">
+                            Creating incentives<br>to keep forests intact
+                            <hr size="2" color="#000" style="margin: 0px;">
+                        </div>
+                        <div class="card-counter">
+                            04
+                        </div>
+                    </div>
+                        <div class="card-content" id="default-content">
+                            <p>
+                                In many countries, standing forests are given limited economic or financial value and often it is more profitable to covert forests into agricultural land than to protect them. This is particularly the case when forests’ benefits to public goods such as the climate or biodiversity are undervalued. Likewise, agricultural subsidies may disincentivize forest protection and legal and administrative barriers may hamper sustainable forest management feasibility and profitability. 
+                                <br>
+                                <br>
+                                To adjust this profitability imbalance and value forests for the vital ecosystem services they provide, incentive mechanisms can be put in place. These include financial incentives such as sustainable investment, saving and credit mechanisms, and blended finance instruments and fiscal incentives such as the repurposing of agricultural subsidies or the development of ecological taxation tools. The value of standing forests can be increased through strengthening the sustainable productive uses of forests. In addition, payment for ecosystem mechanisms and market-based environmental instruments can reward forest protection.
+                            </p>
+                        </div>
+                        <div class="card-content" id="dot11-content" style="display:none;">
+                            <div class="h3">
+                                Strengthening sustainable productive uses of forests
+                            </div>
+                            <p>
+                                An important solution to increase the value of forests is to strengthen their sustainable productive uses. The production of sustainable wood and non-wood forest products can provide a viable alternative to converting forests into farmland while contributing to overall rural development. To promote productive uses of forests in a sustainable manner, governments and the private sector can, among others, adopt sustainable forest management practices, raise awareness of the availability of sustainable wood and non-wood forest products and their wide uses and benefits, and consolidate forest value chains through developing practical and user-friendly administrative processes and attractive business models.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Promotion of sustainable forest management practices, development and adoption of related tools, techniques, and financing mechanisms, and integration of traditional knowledge</li>
+                                <li>Awareness raising of the availability of sustainable wood and non-wood forest products and their wide uses and benefits</li>
+                                <li>Consolidation of wood and non-wood forest product value chains through business model development with higher value addition, investments in product innovation and technologies, more equitable production and trade systems, incubation and mentoring programs for MSMEs (backing entrepreneur support organizations (ESOs)), guarantee funds, equity funds, and targeted subsidies.</li>
+                                <li>Support to community forestry</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot12-content" style="display:none;">
+                            <div class="h3">
+                                Developing financial incentives
+                            </div>
+                            <p>
+                                Creating financial incentives to keep forests intact is an effective way to reduce deforestation while channelling much needed finance to those protecting forests. Sustainable investments, saving and credit mechanisms can incentivize the protection of forests. Inversely, financial penalties or credit restrictions for those found to engage in deforestation can be effective disincentivizes to clear forests.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>De-risking private investment in sustainable agriculture and forest protection through targeted public funds and blended finance mechanisms</li>
+                                <li>Soft loans for ecological investments and climate-smart and/or sustainable investment plans at the local level</li>
+                                <li>Financial penalties or credit restrictions for entities found to engage in deforestation</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot13-content" style="display:none;">
+                            <div class="h3">
+                                Developing fiscal incentives
+                            </div>
+                            <p>
+                                Governments have significant leverage over the private sector through their fiscal powers. Taxation and subsidies can be impactful tools to incentivize desirable business practices while disincentivising unwelcome ones. In the context of addressing deforestation, governments can for instance repurpose agricultural subsidies to consider the value of natural capital and ecosystem services. They can also make use of feebates (contraction of fee and rebate) or bonus-malus systems which are instruments of ecological taxation that combine an increase (malus) in taxes on unsustainably produced commodities with a decrease (bonus) in taxes on products deemed sustainable. This provides incentives to agricultural producers to adopt a non-compulsory norm while achieving budget neutrality by balancing tax increases and decreases. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Repurposing of agricultural subsidies to consider the value of natural capital and ecosystem services, including through cross-sectoral public expenditure analyses </li>
+                                <li>Feebates/Bonus-Malus systems, tax credits for green investments and eco-taxes on negative externalities</li>
+                                <li>Ecological fiscal and cash transfers to jurisdictions and communities based on deforestation or conservation efforts</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot14-content" style="display:none;">
+                            <div class="h3">
+                                Developing payment for ecosystem service mechanisms
+                            </div>
+                            <p>
+                                Payment for ecosystem services programs and REDD+ finance initiatives have been one of the earliest financial interventions to increase the value of standing forests while applying environmental and social safeguards. Their underlying premise is that governments and those protecting forests will be remunerated for reducing deforestation through public and private results-based finance. They can be game changers for channelling much needed finance into forest protection, if appropriate and science-based rules are put in place and implemented. Governments can strengthen their engagement in these mechanisms to reap potential benefits, in addition to developing natural capital accounting systems to value forests’ ecosystem services and mainstreaming true cost accounting to determine the hidden costs of forest destruction and.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Payment for ecosystem services programs and REDD+ finance </li>
+                                <li>Development of natural capital accounting systems and mainstreaming of true cost accounting for agrifood systems transformation</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content" id="dot15-content" style="display:none;">
+                            <div class="h3">
+                                Developing market-based environmental instruments
+                            </div>
+                            <p>
+                                Market-based environmental instruments, and in particular carbon markets, have gained a lot of attention in recent years as a lever for increasing the value of forests and setting up a mechanism for rewarding forest protection. The voluntary carbon market and emerging compliance markets under the Paris Agreement’s Article 6 build upon the conceptual idea that emitters buy credits to off-set their greenhouse gas emissions through emission reductions elsewhere, for instance through reducing emissions from deforestation. To further develop market-based environmental instruments for reducing deforestation and channel finance into forest protection, governments and the private sector can for instance strengthen carbon markets, including by addressing integrity concerns, and by ensuring they are inclusive and accessible to agrifood producers. Success will also depend on the extent to which total global greenhouse gas emissions are covered by carbon pricing instruments.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Development and strengthening of carbon markets </li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot21-content" style="display:none;">
+                            <div class="h3">
+                                Low sustainable forest management profitability
+                            </div>
+                            <p>
+                                Sustainable, productive uses of forests are important for increasing the financial value of standing forests. However, legal, financial, and administrative barriers hamper the profitability of sustainable forest management. Outdated legal systems, convoluted administrative requirements, lacking financial products and services for smallholders and MSMEs, and underfunded and overburdened governmental institutions make forest value chains highly complex and affect the profitability of forestry operations. This in turn reduces the value of standing forests and incentivizes conversion, especially when competing land uses are more profitable.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot22-content" style="display:none;">
+                            <div class="h3">
+                                Profitability imbalance between agricultural production and forest protection
+                            </div>
+                            <p>
+                                Agricultural production is typically more profitable than forest protection. In the vast majority of cases, the short-term monetary gains from converting forests into agricultural land exceed the opportunity cost of keeping forests intact. In addition to producing commodities on the cleared land, farmers are able to sell the timber from cleared forests, thereby having a double financial incentive to deforest. This situation is often exacerbated by inefficient agricultural subsidies. While agricultural subsidies can be important policy tools for promoting food security and economic growth in rural areas, they may have the unintended consequence of promoting forest conversion. This is particularly the case when subsidies incentivize production increases while farmers’ capacity for intensification is limited, forested land is readily available, and effective protection policies and enforcement are lacking.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot23-content" style="display:none;">
+                            <div class="h3">
+                                High upfront and transaction costs associated with sustainable investments  
+                            </div>
+                            <p>
+                                Need content
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot24-content" style="display:none;">
+                            <div class="h3">
+                                Lack of payment for ecosystem services mechanisms  
+                            </div>
+                            <p>
+                                Need content
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot25-content" style="display:none;">
+                            <div class="h3">
+                                Insufficient linkages between deforestation-free agricultural production and carbon markets
+                            </div>
+                            <p>
+                                Forests provide vital ecosystem services, ranging from contributions to biodiversity over reducing climate change to regulating the water cycle. In recent years, several innovative mechanisms have been developed through which stakeholders can be rewarded for protecting forests’ abilities to provide for these services. The underlying logic is that beneficiaries reward those whose lands provide these services, or who manage the land, with subsidies or market payments. However, the rollout of these mechanisms is still in its infancy and not widely adopted, thereby hampering the effective incentivization of forest protection.
+                            </p>
+                        </div>
+
+                    </div>
         </div>
     </div>
     <script src="detailed.js"></script>

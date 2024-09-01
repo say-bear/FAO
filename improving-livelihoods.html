@@ -3,67 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12-Column Layout Page</title>
+    <title>Solution Tree</title>
     <link rel="stylesheet" href="https://use.typekit.net/raa8xjd.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/faologo.svg" alt="Company Logo">
+        <a href="index.html"><img src="images/faologo.svg" alt="Logo of The Food and Agriculture Organization of the United Nations" id="logo-image"></a>
         <div id="transition-circle" class="expand"></div>
     </header>
 
 
+    <div class="content-wrapper" id="page-content">
+
         <div class="side-menu">
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
-                    <img src="images/icons/icon1.svg" alt="Icon 1">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
+                        <img src="images/icons/icon1.svg" alt="Icon 1">
+                    </div>
+                    <div class="icon-text">Strengthening land<br>use governance</div>
                 </div>
-                <div class="icon-text">Strengthening land<br>use governance</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
-                    <img src="images/icons/icon2.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
+                        <img src="images/icons/icon2.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
                 </div>
-                <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="increasing-consumption.html">
-                    <img src="images/icons/icon3.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="increasing-consumption.html">
+                        <img src="images/icons/icon3.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
                 </div>
-                <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="creating-incentives.html">
-                    <img src="images/icons/icon4.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="creating-incentives.html">
+                        <img src="images/icons/icon4.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Creating incentives<br>to keep forests intact</div>
                 </div>
-                <div class="icon-text">Creating incentives<br>to keep forests intact</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
-                    <img src="images/icons/icon5.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
+                        <img src="images/icons/icon5.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
                 </div>
-                <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="improving-livelihoods.html">
-                    <img src="images/icons/icon6.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="improving-livelihoods.html">
+                        <img src="images/icons/icon6.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
                 </div>
-                <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
-            </div>
-            <div class="icon-circle-container">
-                    <button class="back-button"><img src="images/icons/arrow_back.svg"></button>
-                <div class="icon-text">Back to main</div>
-            </div>
         </div>
-
-    <div class="content-wrapper">
-
+           
         <div class="middle-tree">
-           Middle content 6
+                <img src="images/bgtree.png" class="tree-image" id="tree-image">
+                <div class="dots-container" id="dots-container"></div>
         </div>
-        <div class="right-content">
-            Improving livelihoods and promoting<br>equity and inclusion
+        
+        <div class="card-btn">
+    
+                <div class="buttons-container">
+    
+                    <button id="button-up" class="btn-detailed">
+                            <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(90deg);">
+                        Related solutions
+                    </button>
+    
+                    <button id="button-down" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(-90deg);">
+                        Related drivers
+                    </button>
+    
+                    <button id="back-to-tree" style="display:none;" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow">
+                        Back to Tree
+                    </button>
+    
+                </div>
+                <div class="right-content">
+                    <div class="card-header">
+                        <div class="h2">
+                            Improving rural livelihoods<br>and promoting equity<br>and inclusion
+                            <hr size="2" color="#000" style="margin: 0px;">
+                        </div>
+                        <div class="card-counter">
+                            06
+                        </div>
+                    </div>
+                        <div class="card-content" id="default-content">
+                            <p>
+                                Improving rural livelihoods and promoting equity and inclusion can go a long way in reducing deforestation while alleviating poverty and reducing inequalities. Poverty and deforestation are closely linked phenomena, particularly in areas where alternative livelihoods are lacking, educational opportunities are limited, and food insecurity is prevalent. Converting forests into agricultural land is often a coping strategy for smallholder farmers to generate living wages and to compensate for reduced yields on existing land. Fluctuations in commodity prices and exchange rates can also drive farmers to deforest as vulnerabilities to external shocks directly impact livelihoods and economic opportunities.
+                                <br>
+                                <br>
+                                Improving rural livelihoods is therefore not only be beneficial for reducing deforestation, but also for advancing broader sustainable rural development objectives. Increasing, stabilizing, and diversifying farmers’ incomes can alleviate poverty, build resilience, and strengthen economic empowerment. Developing social safety nets can protect against extreme poverty and promoting equity and inclusion strengthens the livelihoods of marginalized groups.
+                            </p>
+                        </div>
+                        <div class="card-content" id="dot11-content" style="display:none;">
+                            <div class="h3">
+                                Increasing, stabilizing and diversifying farmers’ incomes 
+                            </div>
+                            <p>
+                                Increasing wages, especially for smallholder farmers, provides opportunities for alleviating rural poverty while at the same time also having a positive impact on forest protection. To increase, stabilize, and diversify incomes and, in the case of cash crops, enable farmers to better reap the benefits of global trade, governments and the private sector can put in place social and economic measures. These include promoting fair trade approaches, and empowering farmers and their cooperatives in directly accessing markets without the need to go through middlemen. The case of cocoa in Ghana and Cote d’Ivoire also illustrates that a “living income differential” – a markup on top of the floor commodity price – combined with price stabilization mechanisms can increase and stabilize farmers’ income.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Promotion of fair-trade schemes</li>
+                                <li>Strengthening of inclusive aggregation systems such as farmer organizations and cooperatives and enhanced access of farmers and enterprises to international markets</li>
+                                <li>Living income differential and price stabilization mechanisms</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot12-content" style="display:none;">
+                            <div class="h3">
+                                Developing social safety nets
+                            </div>
+                            <p>
+                                Strengthening social safety nets for farmers to reduce the impact of unexpected income losses constitutes a win-win for improved livelihoods and reduced deforestation. Retirement systems and social care for farmers and agricultural revenue insurance schemes can protect against extreme poverty and the need to convert forests to generate living incomes. Likewise, farmers’ organizations and cooperatives can pool their resources to contribute to farmers’ pensions and cover health-related expenses, thereby strengthening overall socioeconomic development and environmental sustainability. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Strengthening retirement systems and social care for farmers, and pooling of resources by farmers’ organizations and cooperatives to contribute to farmers’ pensions and cover health-related expenses</li>
+                                <li>Agricultural revenue insurance schemes</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot13-content" style="display:none;">
+                            <div class="h3">
+                                Promoting equity and inclusion
+                            </div>
+                            <p>
+                                Promoting equity and inclusion holds the potential to reduce inequalities, strengthen sustainable economic development, and reduce pressure on forests. Better inclusion of marginalized groups into the economy and associated creation of economic opportunities, including for women and indigenous, poor, young, and handicapped people, could go a long way in reducing rural poverty. By strengthening access to education, technological capacity, and employment, these groups can better pursue income generating opportunities, improve their livelihoods, and reduce overall rural poverty, thereby also reducing the need to clear forests for economic gains. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Promotion of marginalized groups’ education and creation of employment opportunities</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot21-content" style="display:none;">
+                            <div class="h3">
+                                Poverty and lack of alternative livelihoods
+                            </div>
+                            <p>
+                                Rural poverty can be an important indirect driver of deforestation. Where rural incomes are low, unemployment is high, alternative livelihoods are lacking, and arable farmland is scarce, poverty often forces farmers to clear forests for agricultural production. However, there is also evidence suggesting that poverty may lead to lower deforestation rates as clearing forests requires capital due its resource and labor intensity. Overall, the relationship between poverty and deforestation is highly context-specific and often ambiguous.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot22-content" style="display:none;">
+                            <div class="h3">
+                                Food insecurity
+                            </div>
+                            <p>
+                                In cases of extreme poverty, food insecurity is often a major indirect driver of deforestation and degradation. Subsistence farmers converting forests into cropland are often driven by a need to meet basic food needs. This is particularly the case when crop productivity is declining or already low and there is a risk that farm output generates insufficient food to sustain farmers and their families. 
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot23-content" style="display:none;">
+                            <div class="h3">
+                                Traditional gender roles   
+                            </div>
+                            <p>
+                                Traditional gender roles in forest management often place men as the primary landowners and decision makers, while women's participation in public decision-making remains scarce, despite their high reliance on forest products. Women’s role is typically relegated to subsistence activities and the collection of resources such as non-timber forest products and firewood for household use. Meanwhile, activities led by men often include logging and agricultural expansion. Unequal power dynamics and restricted access to land and decision-making for women can contribute to unsustainable forest management practices, resource exploitation and ultimately, to land clearing and deforestation.
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot24-content" style="display:none;">
+                            <div class="h3">
+                                Low household education  
+                            </div>
+                            <p>
+                                There is evidence suggesting that low education levels are associated with higher deforestation. This is particularly the case when the household head has enjoyed only limited education. Conversely, higher education levels were found to decrease deforestation as it provided greater opportunity for non-farm wage income.
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot25-content" style="display:none;">
+                            <div class="h3">
+                                Vulnerability to commodity price and exchange rate fluctuations  
+                            </div>
+                            <p>
+                                Agricultural production for export markets makes farmers highly susceptible to commodity price and exchange rate fluctuations. When commodity prices are low, farm income drops and already vulnerable farmers and their families may be pushed further into poverty. Farmers are also frequently forced to grow other, more profitable crops that may require more land and lead to forest conversion. Conversely, when commodity prices are high, there is an incentive for farmers to expand their production and, where arable farmland is scarce, clear forests.
+                                <br>
+                                <br>
+                                Likewise, currency devaluations in exporting countries may increase incentives for agricultural expansion and deforestation, as demand for cheaper production increases. Conversely, currency overvaluation may make agricultural exports and associated deforestation relatively unattractive, often negatively affecting farm incomes. However, changes in exchange rates can also have counterintuitive effects, for instance when overvalued currencies lead to economic crises pushing citizens to seek alternative means of income, such as through clearing forests for agriculture.
+
+                            </p>
+                        </div>
+
+                    </div>
         </div>
     </div>
     <script src="detailed.js"></script>

@@ -44,10 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 img.src = 'images/icons/icon0.svg'; // Reset to original icon
                 img.classList.remove('fade-in');
-            }, 300); // Delay to match the fade-out transition
+            }, 10); // Delay to match the fade-out transition
         });
     });
 });
+
+
+// Transition circle
 
 document.addEventListener('DOMContentLoaded', () => {
     const iconCircles = document.querySelectorAll('.icon-circle');

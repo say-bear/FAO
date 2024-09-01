@@ -3,67 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12-Column Layout Page</title>
+    <title>Solution Tree</title>
     <link rel="stylesheet" href="https://use.typekit.net/raa8xjd.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/faologo.svg" alt="Company Logo">
+        <a href="index.html"><img src="images/faologo.svg" alt="Logo of The Food and Agriculture Organization of the United Nations" id="logo-image"></a>
         <div id="transition-circle" class="expand"></div>
     </header>
 
 
-        <div class="side-menu">
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
-                    <img src="images/icons/icon1.svg" alt="Icon 1">
-                </div>
-                <div class="icon-text">Strengthening land<br>use governance</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
-                    <img src="images/icons/icon2.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="increasing-consumption.html">
-                    <img src="images/icons/icon3.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="creating-incentives.html">
-                    <img src="images/icons/icon4.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Creating incentives<br>to keep forests intact</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
-                    <img src="images/icons/icon5.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="improving-livelihoods.html">
-                    <img src="images/icons/icon6.svg" alt="Icon 2">
-                </div>
-                <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
-            </div>
-            <div class="icon-circle-container">
-                    <button class="back-button"><img src="images/icons/arrow_back.svg"></button>
-                <div class="icon-text">Back to main</div>
-            </div>
-        </div>
+    <div class="content-wrapper" id="page-content">
 
-    <div class="content-wrapper">
+        <div class="side-menu">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
+                        <img src="images/icons/icon1.svg" alt="Icon 1">
+                    </div>
+                    <div class="icon-text">Strengthening land<br>use governance</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
+                        <img src="images/icons/icon2.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="increasing-consumption.html">
+                        <img src="images/icons/icon3.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="creating-incentives.html">
+                        <img src="images/icons/icon4.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Creating incentives<br>to keep forests intact</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
+                        <img src="images/icons/icon5.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
+                </div>
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="improving-livelihoods.html">
+                        <img src="images/icons/icon6.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
+                </div>
+        </div>
 
         <div class="middle-tree">
-           Middle content 5
+                <img src="images/bgtree.png" class="tree-image" id="tree-image">
+                <div class="dots-container" id="dots-container"></div>
         </div>
-        <div class="right-content">
-            Improving livelihoods and promoting<br>equity and inclusion
+
+        <div class="card-btn">
+    
+                <div class="buttons-container">
+    
+                    <button id="button-up" class="btn-detailed">
+                            <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(90deg);">
+                        Related solutions
+                    </button>
+    
+                    <button id="button-down" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(-90deg);">
+                        Related drivers
+                    </button>
+    
+                    <button id="back-to-tree" style="display:none;" class="btn-detailed">
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow">
+                        Back to Tree
+                    </button>
+    
+                </div>
+                <div class="right-content">
+                    <div class="card-header">
+                        <div class="h2">
+                            Enhancing information systems<br>for better informed<br>decision-makingo
+                            <hr size="2" color="#000" style="margin: 0px;">
+                        </div>
+                        <div class="card-counter">
+                            05
+                        </div>
+                    </div>
+                        <div class="card-content" id="default-content">
+                            <p>
+                                Information systems and their data provide essential information for understanding the extent of land use and its changes over time and space, including deforestation. They are important tools for informing policy making; yet in practice, land use data is often not readily available, accessible, and reliable. This may be, amongst others, due to insufficient monitoring practices, a lack of data transparency and interoperability, and limited technical skills to access and produce land use data.
+                                <br>
+                                <br>
+                                To enhance information systems and data usage in decision making, governments, the private sector, academia, civil society, indigenous peoples, local communities, and international organizations can undertake important efforts in strengthening data production, accessibility, and related capacities. In addition, enhancing the availability, reliability, relevance, and sustainability of land use data can make a major contribution for informing better decision making to reduce deforestation.
+                            </p>
+                        </div>
+                        <div class="card-content" id="dot11-content" style="display:none;">
+                            <div class="h3">
+                                Building land use data capacity 
+                            </div>
+                            <p>
+                                The ability to produce and interpret data is a prerequisite for ensuring that land use data can inform effective decision making. Building related capacities, particularly of small-scale farmers, communities and local decision makers, can make a major contribution to strengthening land use governance. Governments, the private sector, civil society, and international organizations can make a real difference in this respect through capacity development initiatives that target those who have a key role in collecting, analysing, and using land use data.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Capacity building for land use data usage and data production</li>
+                                <li>Awareness raising on the use of deforestation alerts</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot12-content" style="display:none;">
+                            <div class="h3">
+                                Enhancing availability and accessibility of land use data
+                            </div>
+                            <p>
+                                To inform effective decision making, land use data must be available and accessible to its users. This includes technical availability, i.e. that relevant land use data is being produced, for instance through national forest inventories or remote sensing technology and that it can be downloaded or directly accessed. It also includes conceptual accessibility, i.e. that it is not too complex for users without technical backgrounds to fully understand. Governments can play an important role in enhancing both aspects, for instance by strengthening open data management and sharing, including through National Forest Monitoring Systems, by investing in digital public goods and digital infrastructure, and by making data more user-friendly. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Open data management and sharing </li>
+                                <li>Institutionalization of National Forest Monitoring Systems</li>
+                                <li>Simplifying of data and analysis, and data packaging to communicate information in an understandable way</li>
+                                <li>Investment in digital public goods and public digital infrastructure</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot13-content" style="display:none;">
+                            <div class="h3">
+                                Enhancing transparency, reliability, and credibility of land use data
+                            </div>
+                            <p>
+                                Transparent, reliable, and credible land use data is frequently a precondition for informing effective decision making. In addition to being technically sound and consistent, the credibility of land use data is typically a matter of perception and strongly depends on transparency. In this context, governments can put in place rules and guidelines for enhancing data transparency while strengthening collaboration with important data providers, such as indigenous peoples and local communities and the private sector, who often have access to primary data related to agriculture-linked deforestation. In addition, knowledge and best practice exchanges at the international level can help country stakeholders produce more reliable and credible data.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Development of technically sound data with known uncertainty and consistent datasets across time and space</li>
+                                <li>Strengthening of transparency on methods used</li>
+                                <li>Collaboration with partners, such as indigenous peoples, local communities, and private actors to collect on-the-ground data</li>
+                                <li>Knowledge and best practice exchanges at the international level </li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot14-content" style="display:none;">
+                            <div class="h3">
+                                Enhancing the relevance of land use data
+                            </div>
+                            <p>
+                                Land use data must be relevant to inform effective decision making for reducing agriculture-linked deforestation. To be relevant, land use data should have sufficient thematic and spatial detail, be produced at frequent time intervals, enable assessments of change, and speak to thematic policy priorities. Governments can enhance the relevance of land use data by readjusting their forest monitoring systems to remain relevant and flexible and to adapt monitoring to policy priorities. Innovation in remote sensing, cloud infrastructure, and machine learning can additionally enhance the relevance of land use data with the private sector driving adoption of new technologies. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Assessment of structured information needs to adapt monitoring to policy priorities </li>
+                                <li>Alignment of spatial and temporal detail to make results timely and relevant, and of definitions and reporting formats to facilitate the interoperability of traceability systems</li>
+                                <li>Facilitation of investment into innovation for remote sensing, cloud infrastructure and machine learning technologies</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content" id="dot15-content" style="display:none;">
+                            <div class="h3">
+                                Enhancing sustainability of land use data
+                            </div>
+                            <p>
+                                Land use data systems, such as forest monitoring systems, are more likely to be impactful and operated sustainably when they are affordable and respond to policy needs. Their continuation is important to monitor land use changes and can be facilitated where governments take full ownership and integrate land use monitoring into institutional and procedural arrangements. Strengthening long-term commitment and data ownership are therefore two key measures governments can take to enhance the sustainability of land use data and to increase the data’s contribution to informing effective decision making. 
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Strengthening of domestic ownership and long-term commitment to forest monitoring, including through integrating monitoring data with institutional and procedural arrangements</li>
+                                <li>Ensuring the financing and affordability of monitoring systems</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot21-content" style="display:none;">
+                            <div class="h3">
+                                Insufficient land use monitoring
+                            </div>
+                            <p>
+                                Monitoring of land use change is an important element for identifying potential deforestation hotspots and for responding with appropriate policy interventions and law enforcement action. However, in many cases insufficient monitoring leads to a lack of available and reliable data to take action against deforestation. Conversely, insufficient monitoring may even spur forest conversion, particularly illegal deforestation, as those clearing land may do so without risk of being detected. 
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot22-content" style="display:none;">
+                            <div class="h3">
+                                Lack of data transparency, reliability and credibility 
+                            </div>
+                            <p>
+                                Data transparency, reliability, and credibility is important for informing effective decision making to reduce deforestation. However, often data and analysis are not technically sound and consistent across time and space, and remaining uncertainties are unknown. Likewise, interoperability between datasets is often low. With these limitations, it is difficult for decision makers to effectively address deforestation and, in extreme cases, they may drive forest conversion when measures are poorly informed or misplaced.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot23-content" style="display:none;">
+                            <div class="h3">
+                                Limited user capacity and data accessibility   
+                            </div>
+                            <p>
+                                In many parts of the world, land use data is inaccessible to its potential users. This may be because the data is not disclosed, it is highly technical, or users do not have the necessary skills to access the data. Farmers and local institutions in particular often struggle with accessing and interpreting more complex data, such as those generated through geospatial technology. When such data is available but it cannot be put to use, deforestation may continue or even increase as interventions may miss their targets.
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot24-content" style="display:none;">
+                            <div class="h3">
+                                Limited data relevance  
+                            </div>
+                            <p>
+                                In many parts of the world, static forest and land use monitoring systems produce data at aggregate scales, for scant time intervals, and without sufficient thematic detail. Available data is therefore often not sufficiently relevant to inform decision making. For instance, linking land use data to specific commodities remains a challenge. Without such information, it is difficult to design effective measures for reducing deforestation and, conversely, limited data relevance may also enable those clearing forests to do so with low risk of being detected.  
+                            </p>
+                        </div>
+
+                        <div class="card-content" id="dot25-content" style="display:none;">
+                            <div class="h3">
+                                Discontinuous production of data  
+                            </div>
+                            <p>
+                                Land use data can inform effective decision making to reduce deforestation when data collection and analysis are continuous. However, a lack of funding and institutionalization, limited political ownership, and capacity constraints can contribute to an unsustainable state of monitoring systems, in which data is produced discontinuously. This in turn inhibits effective decision making to address deforestation. 
+                            </p>
+                        </div>
+
+                    </div>
         </div>
     </div>
     <script src="detailed.js"></script>

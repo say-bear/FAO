@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12-Column Layout Page</title>
+    <title>Solution Tree</title>
     <link rel="stylesheet" href="https://use.typekit.net/raa8xjd.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/faologo.svg" alt="Company Logo">
+        <a href="index.html"><img src="images/faologo.svg" alt="Logo of The Food and Agriculture Organization of the United Nations" id="logo-image"></a>
         <div id="transition-circle" class="expand"></div>
     </header>
 
+    <div class="content-wrapper" id="page-content">
 
         <div class="side-menu">
             <div class="icon-circle-container">
@@ -51,13 +52,13 @@
                 </div>
                 <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
             </div>
-        </div>
-
-    <div class="content-wrapper">
+        </div>   
 
         <div class="middle-tree">
             <img src="images/bgtree.png" class="tree-image" id="tree-image">
+            <div class="dots-container" id="dots-container"></div>
         </div>
+
         <div class="card-btn">
 
             <div class="buttons-container">
@@ -88,15 +89,166 @@
                         01
                     </div>
                 </div>
-                <div class="card-content">
+                <div class="card-content" id="default-content">
                     <p>
-                        Increasing the consumption and trade of responsibly-produced agricultural commodities can create win-wins for both the environment and sustainable economic development. Recent decades have seen a rapid increase in the demand for agricultural commodities, including those most commonly produced on recently deforested land. Driven by rapid population growth, urbanization, the ascent of a globalized economy, and a growing global middle class, dietary patterns have shifted towards higher overall food consumption and protein intake. To meet the increasing demand, agricultural production has expanded rapidly and particularly in the tropics, where the demand-side pressure for increased production led to the expansion of agricultural land, notably through the conversion of forests. Meanwhile, only limited market niches have integrated requirements for sustainable and responsible production. Consumer awareness and market requirements are relatively low compared to the overall size of the market for agricultural commodities.
+                        Incoherences or weaknesses of land use policies can explain some deforestation dynamics. For instance, conflicting economic, agricultural, forestry, and rural development policies can create situations where agricultural expansion into forests is facilitated even when forest protection is a stated priority. Likewise, weak law enforcement, insecure tenure, and limited cross-sectorial stakeholder coordination can contribute to an overall state of weak land use governance which enables forest conversion.                         <br>
                         <br>
-                        <br>
-                        In this context, mainstreaming more sustainable production and consumption patterns can make a real difference in achieving forest protection while contributing towards broader benefits for health, the environment, and sustainable development. Companies can take action in adopting responsible business practices and investing in traceability and transparency. Governments can adopt binding requirements for trading commodities linked to deforestation and align trade and biofuel policies with sustainability objectives. In addition, consumers can be incentivized to adapt their consumption patterns towards more sustainable choices.
+                        To address this, a coordinated effort to strengthen policy alignment and clearer land use governance can provide a remedy. In particular, integrated land use planning provides a solution for strengthening synergies among land use sectors. Conservation approaches can protect biodiversity and secure the livelihoods of forest-dependent communities. Strengthening compliance with national regulations can maximize policy effectiveness. And enhancing tenure security holds the potential to not only address broader governance factors contributing to deforestation but also to strengthen livelihoods of indigenous peoples and local communities, and to protect them from land grabs.
                     </p>
                 </div>
-            </div>
+                <div class="card-content" id="dot11-content" style="display:none;">
+                    <div class="h3">
+                        Integrated land use planning
+                    </div>
+                    <p>
+                        Integrated land use planning builds upon the notion of “land-sharing” which promotes the integration of conservation and agricultural production objectives on the same land. It requires coordination across different actors governing or using the land to balance land use priorities, including for pastoral or crop production and forestry. In doing so, it has the potential to minimize conflicts and maximize benefits for affected stakeholders as well as for society, the economy, and the environment at large. Integrated land use planning solutions are typically implemented at the national, sub-national, or local levels and, while typically government-driven, they require participatory input from affected stakeholders.
+                        <br><br><b>Related measures</b><br>
+                    </p>
+                    <ul>
+                        <li>Alignment of policies affecting land use</li>
+                        <li>Strategic planning at national, subnational, and landscape levels promoting cross-sectoral dialogue and linking integrated land use planning to the design of investment packages and shared monitoring systems</li>
+                        <li>Decentralization of governance and strengthening of institutional capacities</li>
+                    </ul>
+                </div>
+
+                <div class="card-content" id="dot12-content" style="display:none;">
+                    <div class="h3">
+                        Promoting conservation
+                    </div>
+                    <p>
+                        Conservation solutions are based on “land-sparing” strategies, i.e. to keep agricultural production and forests separate and to demarcate certain areas for conservation. The conservation approach promotes the intensification of agriculture while allowing blocks of land to be spared for conservation and tends to have a positive impact on biodiversity. Typically, national and sub-national governments are the main implementing actors of conservation approaches considering the required authority to demarcate land, while indigenous peoples and local communities are often involved in the management of conservation areas.
+                        <br><br><b>Related measures</b><br>
+                    </p>
+                    <ul>
+                        <li>Reinforcement of protected area management, designation of a permanent forest estate (PFE), and forest gazetting/classification, regulation of forest clearing for agricultural expansion, minimum tree cover and forest area in agricultural areas</li>
+                        <li>Development of conservation mechanisms/conservation framework agreements</li>
+                        <li>Applying tools to identify forest conservation priorities, such as the High Carbon Stock/High Conservation Values methodology</li>
+                    </ul>
+                    <!--
+                    <button class="btn-detailed" style="bottom: 0%; position: absolute; right: 60px; bottom: 60px;">
+                        Reference
+                        <img src="images/icons/arrow_back.svg" class="btn-arrow" style="transform: rotate(135deg);">
+                    </button>
+                    -->
+                </div>
+
+                <div class="card-content" id="dot13-content" style="display:none;">
+                    <div class="h3">
+                        Strengthening compliance with national regulations
+                    </div>
+                    <div class="leaf">
+                        Ссылка 1
+                    </div>
+                    <p>
+                        In most countries, a clearly defined set of land use rules and regulations exists in national legislation. To strengthen implementation and compliance, governments have an important role to play in using incentive approaches to maximize policy effectiveness. These include the issuance of effective fines and sanctions, strengthening law enforcement capacities, and addressing corruption. Implementing these measures would not only have a positive effect on forest protection, but also help advance broader sustainable rural development.  
+                        <br><br><b>Related measures</b><br>
+                    </p>
+                    <ul>
+                        <li>Issuance of effective fines and other criminal sanctions</li>
+                        <li>Strengthening of law enforcement and control capacities in the field of land use</li>
+                        <li>Development and strengthening of public policy instruments to address corruption</li>
+                    </ul>
+                </div>
+
+                <div class="card-content" id="dot14-content" style="display:none;">
+                    <div class="h3">
+                        Enhancing tenure security
+                    </div>
+                    <p>
+                        Enhancing tenure security holds the potential not only to address broader governance factors contributing to deforestation but to also strengthen livelihoods of indigenous peoples and local communities, and to protect them from land grabs. To do so, governments can recognize and protect customary rights, involve indigenous peoples and local communities in decision-making, and make land titling procedures affordable and accessible. This can help enhance livelihoods, protect forests, and create conditions for sustainable rural development.
+                        <br><br><b>Related measures</b><br>
+                    </p>
+                    <ul>
+                        <li>Affordable and accessible land titling procedures, design of specific collective land titling procedures, and conditions for safe transmission of land ownership or usufruct</li>
+                        <li>Recognition and protection of exclusive or non-exclusive customary rights, including women's rights to land, and integration of tenure recognition and formalization efforts into a larger land use planning framework</li>
+                        <li>Issuance of land title for agricultural use conditioned by forest conservation </li>
+                        <li>Implementation of Free, Prior and Informed Consent (FPIC) procedures, participatory mapping, spatial planning, shared governance procedures, and formal demarcation processes to support recognition and protection of tenure rights, especially for Indigenous Peoples and Local Communities (IPLC)  </li>
+                        <li>Robust dispute resolution mechanisms </li>
+                    </ul>
+                </div>
+
+                <div class="card-content" id="dot21-content" style="display:none;">
+                    <div class="h3">
+                        Conflicting land use policies, limited cross-sectorial coordination, and over-centralized systems
+                    </div>
+                    <p>
+                        Policy misalignment at the national and sub-national level is an important indirect driver of deforestation and degradation. Many sectoral policies affect land use, including economic, rural development, agricultural, climate, forest, and trade policy. Some of these may inadvertently or deliberately promote forest conversion, even when reducing deforestation and degradation is a stated policy objective. This is particularly the case when there is limited cross-sectorial coordination among line ministries in designing and implementing policies. In addition, overly centralized governance systems are often attributed with higher rates of deforestation due to a disconnect with land use realities on the ground and less democratic land-use decision making.
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot22-content" style="display:none;">
+                    <div class="h3">
+                        Lack of land use planning and regulation
+                    </div>
+                    <p>
+                        A robust regulatory framework, combined with land use planning, is essential for reducing deforestation and degradation. In many cases however, policies are weak, outdated, or may be lacking altogether. Likewise, a lack of land use planning creates a vacuum where environmental priorities are neglected for the sake of short-term profits related to forest conversion. This is particularly the case at the landscape level, where land use planning is often less advanced compared to national and sub-national scales.   
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot23-content" style="display:none;">
+                    <div class="h3">
+                        Weak institutional and law enforcement capacity and resources 
+                    </div>
+                    <p>
+                        Low institutional capacities and limited resources in the forest sector are an obstacle to forest protection, and enable forest conversion. A lack of funding and trained personnel as well as limited technical resources hamper the development, implementation, and enforcement of policies and legislation to address deforestation and degradation. Combined with low capacities in conducting research, providing training and extension, and linking science to policy, forest sector institutions are limited in their ability to effectively address deforestation and degradation. This is often further exacerbated by a power and capacity imbalance with other sectoral agencies impacting land use which are typically better equipped and funded.
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot24-content" style="display:none;">
+                    <div class="h3">
+                        Lack of clear tenure 
+                    </div>
+                    <p>
+                        In many parts of the world the right to own or use land is not clearly attributed which can lead to overlapping claims and uncertainty. Indigenous peoples and local communities are particularly affected by insecure tenure as their right to land use and ownership is frequently based on customs rather than laws. This creates a situation where uncertainties around tenure may induce agriculture-linked deforestation, to assert the productive use of land and reduce expropriation risk, and/or to leverage the land as a speculative asset.
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot25-content" style="display:none;">
+                    <div class="h3">
+                        Limited protected area management 
+                    </div>
+                    <p>
+                        The establishment of protected areas is a widely-used and long-standing strategy to reduce deforestation and degradation. However, protected areas often suffer from a lack of effective prioritization and insufficient resources to protect them from encroachment. Likewise, when these areas are not part of a broader land use strategy, they may redirect forest conversion to other areas nearby and thereby inadvertently increase deforestation and degradation. This is particularly the case when local communities who are dependent on forest resources are excluded from protected area management and decision-making processes.
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot26-content" style="display:none;">
+                    <div class="h3">
+                        Corruption and lacking transparency
+                    </div>
+                    <p>
+                        Corruption, clientelism, and the operation of vested interests, combined with lacking transparency, are important indirect drivers of deforestation and degradation. Where corruption is rampant, deforestation tends to increase unabatedly as private interests meet opportunism. With agriculture often being more profitable than forest protection, land use pivots towards forest conversion as law enforcement and public institutions turn a blind eye.  
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot27-content" style="display:none;">
+                    <div class="h3">
+                        Lacking empowerment and engagement of indigenous peoples, local communities and civil society
+                    </div>
+                    <p>
+                        Land use planning, policies, and related legislation are often undertaken without sufficient consultation and engagement of local communities affected by these decisions. This is particularly the case for indigenous peoples who, while often seen as stewards of the world’s forests, rarely have a seat and voice at the land use decision-making table. As a consequence, important interests and knowledge is being excluded, thereby weakening effective policy implementation to reduce deforestation and degradation. Meanwhile, more powerful players, such as from agrifood businesses or politics, are able to leverage their influence to effectively shape land use governance in their favor.   
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot28-content" style="display:none;">
+                    <div class="h3">
+                        Political turnover
+                    </div>
+                    <p>
+                        There is evidence suggesting that deforestation and degradation rates increase during election times. In democratic systems, this may partly be driven by politicians promising forested land for development or turning a blind eye to deforestation and degradation, to seek voter support. In addition, when there is a change in government, administrative shifts and staff turnovers may lead to periods of managerial instability associated with episodic inefficiency, leading to weak institutions unable to effectively address deforestation and degradation.
+                    </p>
+                </div>
+
+                <div class="card-content" id="dot29-content" style="display:none;">
+                    <div class="h3">
+                        Armed conflict
+                    </div>
+                    <p>
+                        Deforestation often increases in conflict and post-conflict zones. The exploitation of natural resources and forest conversion for (illicit) crop production may be a source of funding for armed factions. Likewise, conflict-related displacement may lead to forest clearing to accommodate the influx of people and secure their sustenance. However, a deteriorating security situation may also lead to less deforestation when it is too dangerous to farm. In post-conflict settings, economic development plans and integration of former combatants may further move the forest frontier if agricultural expansion becomes a reconstruction priority.
+                    </p>
+                </div>
+
+                </div>
         </div>
     </div>
     <script src="detailed.js"></script>

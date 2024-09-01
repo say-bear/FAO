@@ -3,62 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12-Column Layout Page</title>
+    <title>Solution Tree</title>
     <link rel="stylesheet" href="https://use.typekit.net/raa8xjd.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/faologo.svg" alt="Company Logo">
+        <a href="index.html"><img src="images/faologo.svg" alt="Logo of The Food and Agriculture Organization of the United Nations" id="logo-image"></a>
         <div id="transition-circle" class="expand"></div>
     </header>
 
+    <div class="content-wrapper" id="page-content">
 
         <div class="side-menu">
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
-                    <img src="images/icons/icon1.svg" alt="Icon 1">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="strengthening-land-use-governance.html">
+                        <img src="images/icons/icon1.svg" alt="Icon 1">
+                    </div>
+                    <div class="icon-text">Strengthening land<br>use governance</div>
                 </div>
-                <div class="icon-text">Strengthening land<br>use governance</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
-                    <img src="images/icons/icon2.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="promoting-sustainable-agricultural-production-models.html">
+                        <img src="images/icons/icon2.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
                 </div>
-                <div class="icon-text">Promoting sustainable<br>agricultural production models</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="increasing-consumption.html">
-                    <img src="images/icons/icon3.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="increasing-consumption.html">
+                        <img src="images/icons/icon3.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
                 </div>
-                <div class="icon-text">Increasing consumption and trade<br>of responsibly-produced agricultural commodities</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="creating-incentives.html">
-                    <img src="images/icons/icon4.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="creating-incentives.html">
+                        <img src="images/icons/icon4.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Creating incentives<br>to keep forests intact</div>
                 </div>
-                <div class="icon-text">Creating incentives<br>to keep forests intact</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
-                    <img src="images/icons/icon5.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="enhancing-robust-information-systems.html">
+                        <img src="images/icons/icon5.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
                 </div>
-                <div class="icon-text">Enhancing robust information systems<br>for better informed policy decisions</div>
-            </div>
-            <div class="icon-circle-container">
-                <div class="icon-circle show-border" data-link="improving-livelihoods.html">
-                    <img src="images/icons/icon6.svg" alt="Icon 2">
+                <div class="icon-circle-container">
+                    <div class="icon-circle show-border" data-link="improving-livelihoods.html">
+                        <img src="images/icons/icon6.svg" alt="Icon 2">
+                    </div>
+                    <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
                 </div>
-                <div class="icon-text">Improving livelihoods and promoting<br>equity and inclusion</div>
-            </div>
+        </div>   
+
+        <div class="middle-tree">
+                <img src="images/bgtree.png" class="tree-image" id="tree-image">
+                <div class="dots-container" id="dots-container"></div>
         </div>
 
-        <div class="content-wrapper">
-
-            <div class="middle-tree">
-                <img src="images/bgtree.png" class="tree-image" id="tree-image">
-            </div>
-            <div class="card-btn">
+        <div class="card-btn">
     
                 <div class="buttons-container">
     
@@ -88,17 +89,121 @@
                             02
                         </div>
                     </div>
-                    <div class="card-content">
-                        <p>
-                            !!! Increasing the consumption and trade of responsibly-produced agricultural commodities can create win-wins for both the environment and sustainable economic development. Recent decades have seen a rapid increase in the demand for agricultural commodities, including those most commonly produced on recently deforested land. Driven by rapid population growth, urbanization, the ascent of a globalized economy, and a growing global middle class, dietary patterns have shifted towards higher overall food consumption and protein intake. To meet the increasing demand, agricultural production has expanded rapidly and particularly in the tropics, where the demand-side pressure for increased production led to the expansion of agricultural land, notably through the conversion of forests. Meanwhile, only limited market niches have integrated requirements for sustainable and responsible production. Consumer awareness and market requirements are relatively low compared to the overall size of the market for agricultural commodities.
-                            <br>
-                            <br>
-                            !!! In this context, mainstreaming more sustainable production and consumption patterns can make a real difference in achieving forest protection while contributing towards broader benefits for health, the environment, and sustainable development. Companies can take action in adopting responsible business practices and investing in traceability and transparency. Governments can adopt binding requirements for trading commodities linked to deforestation and align trade and biofuel policies with sustainability objectives. In addition, consumers can be incentivized to adapt their consumption patterns towards more sustainable choices.
-                        </p>
+                        <div class="card-content" id="default-content">
+                            <p>
+                                Adopting sustainable agricultural practices can significantly enhance land health and productivity. Current challenges, such as inefficient or unsustainable input use, lack of appropriate nutrient management, inefficient harvesting and post-harvesting techniques, overgrazing, and poor soil management contribute to soil erosion, nutrient depletion, and diminishing agricultural output. To compensate for diminishing yields and low production quality for the food and fibres they produce, farmers may seek to convert forests into agricultural land.
+                                <br>
+                                <br>
+                                Shifting to sustainable agricultural production models can offer a win-win for both agriculture and forests. Not only do sustainable production models hold promise for higher yields, improved food security, resilience, and nutrition, including by applying agroecological techniques, but they can also take pressure off forests, advancing biodiversity and climate change objectives. Fostering the adoption of good agricultural practices and appropriate technologies as well as reducing food losses can increase farm output, generate valuable off-farm employment opportunities, while reducing the need for forest conversion. In addition, redirecting agricultural production to previously degraded lands constitutes another important building block for the prevention of agricultural land expansion and resulting deforestation.
+                            </p>
+                        </div>
+                        <div class="card-content" id="dot11-content" style="display:none;">
+                            <div class="h3">
+                                Promoting the design and implementation of integrated, sustainable production systems
+                            </div>
+                            <p>
+                                Integrated and sustainable production systems constitute a potential solution for addressing deforestation and broader food system transformation by increasing agricultural output while protecting the environment. Integrated production systems can increase production by leveraging synergies between cropping and/or livestock components, rather than solely intensifying input use. In particular, by polycropping, multicropping, intercropping, and integrating trees with agricultural crops and/or animals through agroforestry systems farmers can diversify their livelihoods, enhance food security, improve ecosystem services and biodiversity, and strengthen the resilience of agricultural landscapes. Agroforestry systems encompass agrosilvicultural systems, silvopastoral systems, and agrosilvopastoral systems.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Research, development, and knowledge sharing to improve agroecological diversification and agroforestry planning and implementation for sustainable production, including through co-creation with local communities, integrating and upscaling traditional knowledge</li>
+                                <li>Integration of trainings on agroecology into agricultural technical education and general school programs</li>
+                                <li>Subsidies provided and incentives developed to upscale agroecology techniques and agroforestry systems</li>
+                                <li>Investments to develop and implement agroecological approaches, strengthen agroforestry value chains, and improve their economic viability, including through improved access to innovative financing options, such as patient capital for forestry schemes, business case development, extension services, and decision-support tools to guide practitioners in evaluating options</li>
+                                <li>Price premiums for products derived from diverse, integrated farms </li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot12-content" style="display:none;">
+                            <div class="h3">
+                                Fostering the adoption of good agricultural practices, appropriate technologies, and knowledge co-creation and exchange
+                            </div>
+                            <p>
+                                A wide range of good agricultural practices and technologies exist that can improve productivity while addressing environmental, economic, and social sustainability of on-farm processes. These include optimizing farm planning in terms of crop selection and spatio-temporal arrangements, improved management including integrated pest and pollinator management techniques, adaptive irrigation techniques, integrated soil health management, agroecological approaches, and applying good hygiene, sanitation, and biosecurity practices. Strengthening the adoption of these practices, especially among smallholder farmers, can increase farm output and make more sustainable use of available natural resources, while potentially reducing agricultural expansion into forest land  when coupled with appropriate policies, regulations and incentives for conservation.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Knowledge generation, co-creation, exchanges and technical transfer among farmers and local stakeholders - including government entities, businesses, farmers, academia and research institutions - while adressing the benefits and barriers of adopting good agricultural practices and agroecological intensification methods</li>
+                                <li>Improved technical assistance and extension services for smallholder producers, including young farmers, on good agricultural practices, agroecological intensification, and climate-resilient production. This includes strengthened access to digital extension, while aligning  extension services with sustainability standards</li>
+                                <li>Promotion of farmer aggregation, empowerment, entrepreneurship,, and creation of agronomic service bundles</li>
+                                <li>Facilitated access to finance for the adoption of good agricultural practices, with agriculturally appropriate repayment terms</li>
+                                <li>Improving labor efficiency and reducing farm drudgery through the introduction of appropriate and sustainable mechanization</li>
+                                <li>Prohibition of unsustainable agricultural practices, and/or agricultural inputs that are harmful to human health and the environment, pending context-specific assessments</li>
+                                <li>Support to farmers to obtain certification under sustainability standards and under Participatory Guarantee Systems</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot13-content" style="display:none;">
+                            <div class="h3">
+                                Restoration of degraded agricultural lands for sustainable production
+                            </div>
+                            <p>
+                                To reduce agricultural expansion into forests, one possible solution is to redirect agricultural expansion onto previously degraded lands. In many parts of the world, vast areas of degraded lands exist that could be repurposed for agricultural production by being put under restoration. This may range from restorative agricultural practices such as agroforestry for poorly productive lands to concerted and more holistic restoration efforts for lands that no longer produce. Such approaches would not only take pressure off existing forests but also enhance overall ecosystem services and agricultural production. To support the restoration of degraded land for sustainable production, governments can provide economic, fiduciary, and financial incentives to local stakeholders, while ensuring equal access to technical support.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Setting goals and tracking progress for land degradation neutrality</li>
+                                <li>Designation of previously degraded land for agricultural production</li>
+                                <li>Restoration activities on degraded lands, including through farmer managed natural regeneration (FMNR) and activities restoring forest and other ecosystem connectivity to enhance ecosystem services</li>
+                                <li>Economic, fiduciary, and financial incentives to increase increase the restoration of degraded landscapes</li>
+                                <li>Promote digital agriculture and precision farming technologies</li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot14-content" style="display:none;">
+                            <div class="h3">
+                                Reducing food loss
+                            </div>
+                            <p>
+                                Reducing food loss holds the potential to reduce production costs and increase the efficiency of the overall food system, improve food security and nutrition, and contribute towards environmental sustainability. In particular, a more efficient production system that minimizes losses at the harvesting and post-harvesting stages can make a positive contribution towards reducing deforestation by increasing revenues and reducing the need to extend the production area for ensuring a decent income. To decrease food loss, farmers and private sector actors along the supply chain can be incentivized to adopt technical and organisational innovations, such as modern harvesting techniques, and to jointly invest with the public sector in storage, transportation, processing, and cooling facilities as well as infrastructure, packaging, and marketing systems.
+                                <br><br><b>Related measures</b><br>
+                            </p>
+                            <ul>
+                                <li>Promotion and application of good agricultural practices in harvest and post-harvest handling, including integrated pest management (IPM) strategies </li>
+                                <li>Development of affordable and enhanced storage and efficient transportation solutions, technologies and capacities for small agricultural producers, including through targeted financing mechanisms</li>
+                                <li>Adoption of sustainable and circular bioeconomy practices in agriculture to maximize product value, minimize waste and resource use, and regenerate organic flows  </li>
+                            </ul>
+                        </div>
+        
+                        <div class="card-content" id="dot21-content" style="display:none;">
+                            <div class="h3">
+                                Unsustainable agricultural practices and (low) intensification
+                            </div>
+                            <p>
+                                Unsustainable agricultural practices are leading to degradation of the resource base, which indirectly contributes to deforestation and forest degradation. These practices include inefficient or unsustainable input use, lack of appropriate nutrient management, poor management of weeds, pests, and diseases, inefficient harvesting and post-harvesting techniques, overgrazing, and poor soil management leading to erosion and degradation. For smallholders, it is often a combination of lacking access to resources, inputs such as seeds, fertilizers and plant protection products, technologies, knowledge (including limited farmer to farmer/community knowledge co-creation and sharing), finance, extension services and limited incentives that prevent the adoption of more sustainable agricultural practices. In some cases, good agricultural practices also come with higher labor costs and requirements, which may make them difficult to implement for labour-constrained, unmechanized smallholders. For commodity-based industrial agribusinesses, on the other hand, it is often the prospect of short-term profitability that drives the use of unsustainable practices over more sustainable methods that protect the resource base in the long-term, but may be more costly or resource-intensive in the short-run.
+                                <br>
+                                <br>
+                                In turn, these unsustainable practices decrease soil health and nutrient availability. Lack of organic matter in soils also becomes a limiting factor in production, and with degrading soils comes lower production of biomass and reduced opportunities to recycle nutrients, contributing to cyclical degradation. As a consequence, yields decrease and to compensate for lower productivity, smallholder farmers and industrial agribusinesses alike may clear more land for crop planting or livestock grazing. Notwithstanding, there is also evidence that high nutrient fertility may attract new farmers to the forest frontier who may convert forests for small-scale production systems.
+                                <br>
+                                <br>
+                                Agricultural intensification through the adoption of <a href="https://www.fao.org/plant-production-protection/news-and-events/news/news-detail/fao-provides-new-guidelines-to-maximize-crop-yields-and-improve-food-safety/en">good agricultural practices</a>, in turn, may reduce pressure on forests as it allows farmers to improve yields, as well as potentially diversify their production systems with other crops. However, agricultural intensification may also encourage more deforestation if it leads to higher returns, thereby encouraging farmers and agribusinesses to further expand production through forest clearing and attracting new farmers to the forest frontier. This is particularly the case when demand for products and commodity prices are elastic, when the cost of agricultural inputs is either unusually high or low, and when forest protection policies are insufficiently enforced. Likewise, intensification driven by seed and biotechnological developments may enable agricultural expansion into previously ineligible areas, with potential positive (if on degraded lands) or negative impacts on forests.
+
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot22-content" style="display:none;">
+                            <div class="h3">
+                                Shorter fallow periods and  smallholders’ decreasing land sizes due to demographic growth
+                            </div>
+                            <p>
+                                Demographic growth is driving changes in agricultural production models. Fallow periods are shortening as demand for crops and livestock products increases, thereby decreasing natural regeneration, soil fertility, and productivity. With cultivatable land becoming increasingly scarce, farmers are incentivized to clear forests to meet the demand for agricultural commodities. In addition, shorter fallow periods exacerbate the impact of poor agricultural practices. This is particularly true with shifting cultivation modes of production, where poor practices were largely balanced by longer fallow cycles, which enabled natural vegetation to regenerate and soil health to gradually restore. As populations grow, the cycles of shifting cultivation become shorter, or in some cases lead to permanent cropping without fallowing, which can lead to degradations in soil health when critical nutrients are not replaced.    
+                                <br>
+                                <br>
+                                Likewise, population pressures lead to shrinking land sizes, especially those of smallholder farmers who find it increasingly difficult to achieve economies of scale and generate a living income. As a consequence, smallholders may seek alternative economic opportunities, extend to forests lands for farming, or be driven out of  agriculture due to their inability to compete with larger commercial farming operations, which achieve economies of scale and consolidate land for commercial farming. This in turn can lead to deforestation as agribusinesses purchase smallholders’ lands and clear forest patches and fragments between the smallholders’ plots for intensive production.
+                            </p>
+                        </div>
+        
+                        <div class="card-content" id="dot23-content" style="display:none;">
+                            <div class="h3">
+                                Climate change impacts on agricultural production  
+                            </div>
+                            <p>
+                                The impact of climate change on agricultural production is an increasingly important underlying driver of deforestation. With more frequent and intense extreme weather events, such as droughts and floods, existing agricultural production models are put under growing pressure causing farm output to fall. Meanwhile, climate change is causing production seasons, such as rainy and dry seasons, to shift and become increasingly irregular and unpredictable. With less certainty and potentially more adverse climate conditions, agricultural production and profitability are affected, exacerbated by a potential unwillingness of smallholders to invest time and resources in good agricultural practices when outputs become increasingly uncertain. To compensate for this and maintain farm outputs, farmers may instead opt to expand production on cleared forestland to secure arable land for production, notably in areas with weather or topographic conditions different from their main area of production. Fires, due to drought conditions and poor fire management, may additionally spread from farms to forests, and vice versa, thereby contributing to forest and harvest losses.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
         </div>
-        <script src="detailed.js"></script>
-    </body>
-    </html>
+    </div>
+    <script src="detailed.js"></script>
+</body>
+</html>

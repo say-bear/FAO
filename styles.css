@@ -55,10 +55,29 @@ h1 {
     padding-bottom: 30px;
 }
 
-p {
+.h3 {
+    color: var(--black, #000);
+    font-family: "bebas-neue-pro",sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 43.2px */
+    letter-spacing: -2.4px;
+}
+
+p, li {
     font-size: var(--text-size);
     line-height: var(--text-line-height);
 }
+
+ul {
+    padding-left: 32px;
+}
+
+ul li::marker {
+    color: var(--dark_green);
+    font-size: 1.5em;
+  }
 
 a {
     color: #96A23C;
@@ -76,6 +95,8 @@ a:hover {
     gap: 16px;
     position: relative; /* Ensure this is positioned relative to its container */
     height: 100vh;
+    overflow: clip;
+
 }
 
 /*LEFT*/
@@ -154,7 +175,7 @@ a:hover {
     flex-direction: column;
     gap: 20px; /* Space between rows of icon-text pairs */
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .icon-circle-container {
@@ -162,6 +183,7 @@ a:hover {
     align-items: center;
     gap: 16px; /* Space between icon and text */
     flex-direction: row-reverse;
+    cursor: pointer;
 }
 
 .icon-circle {
@@ -239,7 +261,7 @@ a:hover {
 
 .right-part {
     grid-column: span 6;
-    z-index: 999;
+    z-index: 900;
 }
 
 .image {
@@ -329,32 +351,42 @@ a:hover {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    padding-left: 120px;
+    padding-left: 100px;
 }
 
 .middle-tree {
-    width: 50vw; /* Fixed width */
     transition: opacity 0.3s ease;
+    position: relative;
+    display: inline-block;
+    align-content: center;
 }
 
 .right-content {
     flex: 1;
-    z-index: 2;
+    z-index: 3;
     background-color: var(--light_green);
-    transition: transform 0.5s ease-in-out;
+    transition: 0.8s ease;
     margin: 40px 40px 40px 0px;
     padding: 24px 32px 24px 32px;
     border-radius: 24px;
-    background-image: url(/images/cardbg.svg);
+    background-image: url(images/cardbg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
     
 
 .card-header {
     display: flex;
     justify-content: space-between;
+}
+
+.card-header.hidden,
+.card-content.hidden {
+    opacity: 0;
 }
 
 
@@ -368,15 +400,6 @@ a:hover {
     transform: translateY(12px);
 }
 
-
-.content-hidden {
-    visibility: hidden;
-}
-
-.content-visible {
-    visibility: visible;
-}
-
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -384,36 +407,21 @@ a:hover {
 
 .fade-in {
     opacity: 1;
-    transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s ease;
 }
 
-.card-header, .card-content {
+.card-header,
+.card-content {
+    opacity: 1;
     transition: opacity 0.5s ease;
 
 }
  .card-content {
-    transition-delay: 0.1s;
+    transition-delay: 0.2s;
+    max-height: 100%;
+    overflow-y: auto; 
+    padding-right: 20px;
  }
-
-
-
-/* Text Line-by-line
-
-
-.reveal-text {
-    visibility: hidden;
-  }
-  
-  .line {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-  }
-
-*/
-
-
-  /*tree to branch*/
 
 
 .buttons-container {
@@ -424,10 +432,12 @@ a:hover {
     gap: 8px;
     margin-bottom: 40px;
     width: 220px;
+    z-index: 4;
 }
 
 #tree-image {
     transition: 0.8s ease;
+    width: 50vw;
 }
 
 .btn-detailed {
@@ -449,7 +459,8 @@ a:hover {
 }
 
 .btn-detailed:hover {
-    background-color: #FFF;
+    background-color: #96A23C;
+    transition: 0.3s ease;
 }
 
 .card-btn {
@@ -466,3 +477,70 @@ a:hover {
     border-radius: 100%;
 }
 
+
+
+/*Dots*/
+
+
+.dots-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vw;
+    pointer-events: none; /* Keep this to ensure the container itself does not block clicks */
+    z-index: 20;
+    transition: 0.8s ease;
+}
+
+.dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: var(--dark_green);
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 21;
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 0.5s forwards; 
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dot:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease;
+    background-color: #96A23C;
+    border: 2px solid var(--light_green);
+}
+
+.leaf {
+    background-image: url(images/icons/leaf.svg);
+    height: 100px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--dark_green);
+    opacity: 0.1;
+    border-radius: 12px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark_green);
+    opacity: 1;}
